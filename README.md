@@ -1,7 +1,9 @@
-# Exp-6-Synchornous-counters - up counter and down counter 
+[9:28 AM, 12/22/2023] Loksai: # Experiment-06 Synchornous counters up counter
 ### AIM: To implement 4 bit up and down counters and validate  functionality.
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### Name: R.GIRIVASAN
+### Register number: 23003279
+##### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
+##### SOFTWARE REQUIRED:   Quartus prime
 ### THEORY 
 
 ## UP COUNTER 
@@ -9,80 +11,89 @@ The counter is a digital sequential circuit and here it is a 4 bit counter, whic
 
 The counter (“count“) value will be evaluated at every positive (rising) edge of the clock (“clk“) cycle.
 The Counter will be set to Zero when “reset” input is at logic high.
-The counter will be loaded with “data” input when the “load” signal is at logic high. Otherwise, it will count up or down.
-The counter will count up when the “up_down” signal is logic high, otherwise count down
+The counter will be loaded with “data” input when the “load” signal is at logic high. Otherwise, it …
+[9:28 AM, 12/22/2023] Loksai: # Study-of-basic-digital-IC-s-and-verification-of-truth-tables-for-different-logic-gates-realization-
+### BY:RAVIVARMAN G S
+### RegisterNumber:  23006420
+ AIM:
+To study about the different digital IC’s and to verify the truth table in Quartus for the basic logic gates using Verilog programming.
 
-Since we know that binary count sequences follow a pattern of octave (factor of 2) frequency division, and that J-K flip-flop multivibrators set up for the “toggle” mode are capable of performing this type of frequency division, we can envision a circuit made up of several J-K flip-flops, cascaded to produce four bits of output.
-The main problem facing us is to determine how to connect these flip-flops together so that they toggle at the right times to produce the proper binary sequence.
-Examine the following binary count sequence, paying attention to patterns preceding the “toggling” of a bit between 0 and 1:
-Binary count sequence, paying attention to patterns preceding the “toggling” of a bit between 0 and 1.
+Equipments Required:
+Hardware – PCs, Cyclone II , USB flasher
+Software – Quartus prime
+Theory
+Introduction
+Logic gates are the basic building blocks of any digital system. Logic gates are electronic circuits having one or more than one input and only one output. The relationship between the input and the output is based on a certain logic. Based on this, logic gates are named as
 
-Note that each bit in this four-bit sequence toggles when the bit before it (the bit having a lesser significance, or place-weight), toggles in a particular direction: from 1 to 0.
+AND gate
+OR gate
+NOT gate
+NAND gate
+NOR gate
+Ex-OR gate
+Ex-NOR gate
+1) AND gate
+The AND gate is an electronic circuit that gives a high output (1) only if all its inputs are high. A dot (.) is used to show the AND operation i.e. A.B or can be written as AB
 
+Y= A.B
 
+2) OR gate
+The OR gate is an electronic circuit that gives a high output (1) if one or more of its inputs are high. A plus (+) is used to show the OR operation.
 
- 
- 
+Y= A+B
 
-Starting with four J-K flip-flops connected in such a way to always be in the “toggle” mode, we need to determine how to connect the clock inputs in such a way so that each succeeding bit toggles when the bit before it transitions from 1 to 0.
+3) NOT gate
+The NOT gate is an electronic circuit that produces an inverted version of the input at its output. It is also known as an inverter. If the input variable is A, the inverted output is known as NOT A. This is also shown as A' or A with a bar over the top, as shown at the outputs.
 
-The Q outputs of each flip-flop will serve as the respective binary bits of the final, four-bit count:
+Y= A'
 
- 
- 
+4) NAND gate
+This is a NOT-AND gate which is equal to an AND gate followed by a NOT gate. The outputs of all NAND gates are high if any of the inputs are low. The symbol is an AND gate with a small circle on the output. The small circle represents inversion.
 
-Four-bit “Up” Counter
-![image](https://user-images.githubusercontent.com/36288975/169644758-b2f4339d-9532-40c5-af40-8f4f8c942e2c.png)
+Y= (AB)’
 
+5) NOR gate
+This is a NOT-OR gate which is equal to an OR gate followed by a NOT gate. The outputs of all NOR gates are low if any of the inputs are high. The symbol is an OR gate with a small circle on the output. The small circle represents inversion.
 
+Y= (A+B)’
 
-## DOWN COUNTER 
+6) Ex-OR gate
+The 'Exclusive-OR' gate is a circuit which will give a high output if either, but not both of its two inputs are high. An encircled plus sign (⊕) is used to show the Ex-OR operation.
 
-As well as counting “up” from zero and increasing or incrementing to some preset value, it is sometimes necessary to count “down” from a predetermined value to zero allowing us to produce an output that activates when the zero count or some other pre-set value is reached.
+Y= A⊕B
 
-This type of counter is normally referred to as a Down Counter, (CTD). In a binary or BCD down counter, the count decreases by one for each external clock pulse from some preset value. Special dual purpose IC’s such as the TTL 74LS193 or CMOS CD4510 are 4-bit binary Up or Down counters which have an additional input pin to select either the up or down count mode.
-![image](https://user-images.githubusercontent.com/36288975/169644844-1a14e123-7228-4ed8-81a9-eb937dff4ac8.png)
+7) Ex-NOR gate
+The 'Exclusive-NOR' gate circuit does the opposite to the EX-OR gate. It will give a low output if either, but not both of its two inputs are high. The symbol is an EX-OR gate with a small circle on the output. The small circle represents inversion.
 
+Y= A⊕B
 
-4-bit Count Down Counter
-### Procedure
-/* write all the steps invloved */
+Procedure
+Connect the supply (+5V) to the circuit
+Switch ON the main switch
+Press the switches for inputs “A” and “B”. The switch is ON state when 1 is pressed. The switch is OFF state when 0 is pressed.
+If the output is 1, then the bulb glows.
+Check all the gates following the same procedure.
+### Program:
 
-
-
-### PROGRAM 
-/*
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-
-
-
-
-
-
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-
-
-
-
-
-
-
-
-
-### TIMING DIGRAMS FOR COUNTER  
-
-
-
+![2](https://github.com/Srivatsan0405/Study-of-basic-digital-IC-s-and-verification-of-truth-tables-for-different-logic-gates-realization-/assets/139841630/83df74fc-94a1-4129-b4c6-43e135fbda9a)
 
 
-### TRUTH TABLE 
+Program to verify the truth table in quartus for the basic logic gates using Verilog programming.
+
+### RTL realization
+
+![Capture](https://github.com/Srivatsan0405/Study-of-basic-digital-IC-s-and-verification-of-truth-tables-for-different-logic-gates-realization-/assets/139841630/7879a435-aebb-4fbc-a4fb-0fe536b02aa8)
+
+
+### Truthtable
+
+![1](https://github.com/Srivatsan0405/Study-of-basic-digital-IC-s-and-verification-of-truth-tables-for-different-logic-gates-realization-/assets/139841630/9245eac3-c612-4bdf-8320-7cb91c2f9860)
+
+### Waveform:
+![Screenshot 2023-07-18 121057](https://github.com/Srivatsan0405/Study-of-basic-digital-IC-s-and-verification-of-truth-tables-for-different-logic-gates-realization-/assets/139841630/ef0cd730-4a32-4b43-af04-5aa3f76fbc6e)
 
 
 
 
-
-
-### RESULTS 
+Result:
+Thus the different digital IC’s are studied and the truth table for different logic gates are verified.
